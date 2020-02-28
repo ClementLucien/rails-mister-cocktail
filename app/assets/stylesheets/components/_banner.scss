@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+.home-banner {
+  background-image: url('https://images.unsplash.com/photo-1558383409-ab7ef8db3e01?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1370&q=80'), linear-gradient(217deg, rgba(0,0,0,.6), rgba(255,255,255,.6));
+  background-size: cover;
+  background-position: 50% 40%;
+  height: 70vh;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 30vh;
+}
+
+.home-banner .title{
+  font-family: 'Lobster', ;
+  font-size: 80px;
+}

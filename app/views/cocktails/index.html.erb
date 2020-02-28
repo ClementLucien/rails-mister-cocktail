@@ -1,0 +1,22 @@
+
+<div class="home-banner">
+  <h1 class="font-weight-bold text-white title">Simpson character cocktail</h1>
+</div>
+
+<div class="container col-lg-10 pt-3">
+  <%= link_to 'Create your custom cocktail', new_cocktail_path(@cocktail), class: "btn btn-primary" %>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-8 p-3 d-flex justify-content-center">
+        <% @cocktails.each do |cocktail|  %>
+          <div class="card" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1556855810-ac404aa91e85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" class="card-img-top">
+            <div class="card-body">
+              <p class="card-text"> <%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

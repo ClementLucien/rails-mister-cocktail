@@ -1,0 +1,15 @@
+<%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name %>
+
+  <%= f.fields_for :doses do |ff| %>
+    <%= ff.association :ingredient, class: 'ingredient' %>
+    <%= ff.input :description %>
+
+  <% end %>
+  <%= f.submit 'Create cocktail', class: 'btn btn-success' %>
+<% end %>
+
+
+
+
+
