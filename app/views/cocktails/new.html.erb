@@ -5,8 +5,9 @@
     <%= f.fields_for :doses do |ff| %>
       <%= ff.association :ingredient, class: 'ingredient' %><br>
       <%= ff.input :description %><br>
-
     <% end %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit 'Create cocktail', class: 'btn btn-success' %><br>
   <% end %>
 </div>
+
