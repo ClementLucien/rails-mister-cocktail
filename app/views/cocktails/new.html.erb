@@ -1,15 +1,12 @@
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
+<div class="container col-8 p-3">
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %><br>
 
-  <%= f.fields_for :doses do |ff| %>
-    <%= ff.association :ingredient, class: 'ingredient' %>
-    <%= ff.input :description %>
+    <%= f.fields_for :doses do |ff| %>
+      <%= ff.association :ingredient, class: 'ingredient' %><br>
+      <%= ff.input :description %><br>
 
+    <% end %>
+    <%= f.submit 'Create cocktail', class: 'btn btn-success' %><br>
   <% end %>
-  <%= f.submit 'Create cocktail', class: 'btn btn-success' %>
-<% end %>
-
-
-
-
-
+</div>
