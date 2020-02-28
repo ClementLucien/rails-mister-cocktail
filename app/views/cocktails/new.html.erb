@@ -1,13 +1,13 @@
-<div class="container col-8 p-3">
+<div class="container formulaire col-6">
   <%= simple_form_for @cocktail do |f| %>
-    <%= f.input :name %><br>
+    <%= f.input :name %>
 
     <%= f.fields_for :doses do |ff| %>
-      <%= ff.association :ingredient, class: 'ingredient' %><br>
-      <%= ff.input :description %><br>
+      <%= ff.association :ingredient, class: 'ingredient' %>
+      <%= ff.input :description %>
     <% end %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit 'Create cocktail', class: 'btn btn-success' %><br>
+    <%= f.submit 'Create cocktail', class: 'btn btn-success' %>
   <% end %>
 </div>
 
